@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Angular First App </title>
-        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-        
-        <script>
-            // var app = angular.module("sample", []);
 
-            // app.directive("myDirective", function () {
-            //     return {
-            //         template: '<h1>Custom directive</h1>'
-            //     }
-            // });
+<head>
+    <title> Angular First App </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
-            // app.component('myComponent', {
-            //     template: '<h4>Custom Component</h4>'
-            // });
+    <script>
+        // var app = angular.module("sample", []);
 
-            // component with controller
-            angular.module('sample', []).component('userName', {
-                template: '<div><h1> user: {{$ctrl.user}}</h1><input type="text" ng-model="$ctrl.user"/></div>',
-                controller: function userController(){
-                    this.user = 'anonymous';
-                }   
-            });
+        // app.directive("myDirective", function () {
+        //     return {
+        //         template: '<h1>Custom directive</h1>'
+        //     }
+        // });
 
-        </script>
+        // app.component('myComponent', {
+        //     template: '<h4>Custom Component</h4>'
+        // });
 
-    </head>
+        // component with controller
+        angular.module('sample', []).component('userName', {
+            template: '<div><h1> user: {{$ctrl.user}}</h1><input type="text" ng-model="$ctrl.user"/></div>',
+            controller: function userController() {
+                this.user = 'anonymous';
+            }
+        });
 
-    <body>
-        1 + 2 is {{1 + 2}}
+        angular.module('myApp', {
+            template: '',
+
+        });
+
+    </script>
+
+
+    
+
+
+</head>
+
+<body>
+    1 + 2 is {{1 + 2}}
 
 
     <!-- Two way binding -->
-        <div ng-app="sample">
-            <!-- <input type="text" ng-model="name">
+    <div ng-app="sample">
+        <!-- <input type="text" ng-model="name">
             <p>Hello, {{ name }}!</p>
             <my-directive></my-directive>
             <my-component></my-component> -->
-            <user-name></user-name>
+        <user-name></user-name>
 
-        </div>
-          
+    </div>
 
-    </body>
+
+</body>
+
 </html>
-
-
-  

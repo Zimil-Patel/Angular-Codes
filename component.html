@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular First App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        // Define the AngularJS application module and component after loading AngularJS
+        angular.module('myApp', []).component('greetUser', {
+            template: 'Hello, {{$ctrl.user}}!',
+            controller: function GreetUserController() {
+                this.user = 'world';
+            }
+        });
+    </script>
+</head>
+
+<body ng-app="myApp">
+    <!-- The following line is how to use the `greetUser` component above in your HTML doc. -->
+    <greet-user></greet-user>
+</body>
+
+</html>
